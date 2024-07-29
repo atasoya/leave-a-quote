@@ -17,6 +17,9 @@
             <p>sa</p>
         </div> --}}
         <div class="flex flex-col items-center quotes min-h-screen md:w-1/2 min-w-screen order-2 md:order-1 mt-10">
+            <x-badge
+                :catagory="'Hot Quotes'"
+            />
             @foreach($quotes as $quote)
                 <x-quote
                     :quote="$quote->quote"
