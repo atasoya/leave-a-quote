@@ -21,7 +21,7 @@
         </div>
         <div class="quote">
             <p class="italic">
-                {{$quote}}
+                "{{$quote}}"
             </p>
         </div>
         <div class="interactions space-x-2">
