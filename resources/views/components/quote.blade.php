@@ -5,7 +5,7 @@
         </p>
         <span class="text-sm">•</span>
         <p class="font-ligt text-sm">
-            2024-7-29
+            {{$date->diffForHumans()}}
         </p>
     </div>
     <div class="quote">

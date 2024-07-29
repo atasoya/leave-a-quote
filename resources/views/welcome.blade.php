@@ -23,7 +23,7 @@
                     :writer="$quote->writer"
                     :likes="$quote->likes"
                     :reports="$quote->reports"
-                    :created_at="$quote->created_at"
+                    :date="$quote->created_at"
                 />
             @endforeach
             <div class="pagination mt-4">

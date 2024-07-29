@@ -22,7 +22,7 @@
           <li><a>Hot</a></li>
         </ul>
       </div>
-      <a class="btn btn-ghost text-xl">Leave a Quote</a>
+      <a class="btn btn-ghost text-xl" href="/">Leave a Quote</a>
     </div>
     <div class="navbar-center hidden lg:flex">
       <ul class="menu menu-horizontal px-1">
@@ -32,6 +32,6 @@
     </div>
     <div class="navbar-end">
         
-      <a class="btn"><i class="fa-solid fa-plus"></i>Create</a>
+      <a class="btn" href="/create"><i class="fa-solid fa-plus"></i>Create</a>
     </div>
   </div>
