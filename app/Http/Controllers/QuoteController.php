@@ -9,7 +9,7 @@ class QuoteController extends Controller
 {
     public function index()
     {
-        $quotes = Quote::paginate(10);
+        $quotes = Quote::orderBy('created_at', 'desc')->paginate(10);
     
         return view('welcome', ['quotes' => $quotes])
             ->with('success', session('success'));
