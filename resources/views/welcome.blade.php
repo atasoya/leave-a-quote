@@ -24,15 +24,11 @@
                     :likes="$quote->likes"
                     :reports="$quote->reports"
                     :date="$quote->created_at"
+                    :id="$quote->id"
                 />
             @endforeach
             <div class="pagination mt-4">
                 {{ $quotes->links() }}
-            </div>
-            <div class="join">
-                <button class="join-item btn">«</button>
-                <button class="join-item btn">Page 22</button>
-                <button class="join-item btn">»</button>
             </div>
         </div>
    </div>

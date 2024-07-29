@@ -1,4 +1,4 @@
-<div class="quote-card  w-96 flex flex-col h-fit space-y-1">
+<div class="quote-card  w-96 flex flex-col h-fit space-y-1" id={{$id}}>
     <div class="quote-header flex space-x-2">
         <p class="font-bold text-sm">
             {{$writer}}
