@@ -12,29 +12,24 @@
 </head>
 <body>
    <x-navbar/>
-   <div class="content flex flex-col items-center justify-center min-h-screen">
+   <div class="content flex flex-col items-center  min-h-screen mt-4">
         <h1 class="text-2xl font-bold mb-6">Create a New Quote</h1>
-        <form action="{{ route('quotes.store') }}" method="POST" class="w-full max-w-md">
+        <form action="{{ route('quotes.store') }}" method="POST" class="w-full max-w-md flex flex-col items-center">
             @csrf
-            <div class="mb-4">
-                <label for="writer" class="block text-gray-700 text-sm font-bold mb-2">Writer</label>
-                <input type="text" name="writer" id="writer" class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" required>
-            </div>
+            <label class="form-control w-full max-w-xs">
+                <div class="label">
+                  <span class="label-text font-bold">Writer</span>
+                </div>
+                <input type="text" name="writer" id="writer" placeholder="Type here" class="input input-bordered input-primary w-full max-w-xs mb-4" />
+
+            </label>
             <div class="mb-4">
                 <label for="quote" class="block text-gray-700 text-sm font-bold mb-2">Quote</label>
-                <textarea name="quote" id="quote" class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" required></textarea>
+                <textarea name="quote" id="quote" class="textarea textarea-primary" placeholder="Bio"></textarea>
             </div>
-            <div class="mb-4">
-                <label for="likes" class="block text-gray-700 text-sm font-bold mb-2">Likes</label>
-                <input type="number" name="likes" id="likes" class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline">
-            </div>
-            <div class="mb-4">
-                <label for="reports" class="block text-gray-700 text-sm font-bold mb-2">Reports</label>
-                <input type="number" name="reports" id="reports" class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline">
-            </div>
-            <div class="flex items-center justify-between">
-                <button type="submit" class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline">Create Quote</button>
-            </div>
+            
+            <button type="submit" class="btn btn-primary">Submit</button>
+     
         </form>
    </div>
 </body>
