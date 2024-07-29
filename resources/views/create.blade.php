@@ -25,7 +25,7 @@
             </label>
             <div class="mb-4">
                 <label for="quote" class="block text-gray-700 text-sm font-bold mb-2">Quote</label>
-                <textarea name="quote" id="quote" class="textarea textarea-primary" placeholder="Bio"></textarea>
+                <textarea name="quote" id="quote" class="textarea textarea-primary" placeholder="Quote"></textarea>
             </div>
             
             <button type="submit" class="btn btn-primary">Submit</button>
