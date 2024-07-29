@@ -26,7 +26,7 @@
     </div>
     <div class="navbar-center hidden lg:flex">
       <ul class="menu menu-horizontal px-1">
-        <li><a>Popular</a></li>
+        <li><a href="/popular">Popular</a></li>
         <li><a>Hot</a></li>
       </ul>
     </div>
