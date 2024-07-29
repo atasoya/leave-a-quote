@@ -10,11 +10,9 @@ class QuoteController extends Controller
     public function index()
     {
         $quotes = Quote::orderBy('created_at', 'desc')->paginate(10);
-    
         return view('welcome', ['quotes' => $quotes])
             ->with('success', session('success'));
     }
-    
 
     public function create()
     {
@@ -23,14 +21,12 @@ class QuoteController extends Controller
 
     public function store(Request $request)
     {
-
         $request->validate([
             'writer' => 'required|string|max:255',
             'quote' => 'required|string',
             'likes' => 'integer',
             'reports' => 'integer',
         ]);
-
 
         Quote::create([
             'writer' => $request->writer,
@@ -39,7 +35,6 @@ class QuoteController extends Controller
             'reports' => $request->reports ?? 0,
         ]);
 
-
         return redirect()->route('quotes.index')->with('success', 'Quote created successfully.');
     }
 
@@ -47,18 +42,20 @@ class QuoteController extends Controller
     {
         $id = $request->input('id');
         $action = $request->input('action');
-    
+        $activate = $request->input('activate') === 'true';
+
+        $quote = Quote::find($id);
+
         if ($action === 'like') {
-
-            $quote = Quote::find($id);
-            $quote->likes += 1;
-            $quote->save();
-            return response()->json(['success' => true]);
+            $quote->likes += $activate ? 1 : -1;
         } elseif ($action === 'flag') {
-
-            return response()->json(['success' => true]);
+            $quote->reports += $activate ? 1 : -1; 
         } else {
             return response()->json(['success' => false, 'message' => 'Invalid action']);
         }
+
+        $quote->save();
+
+        return response()->json(['success' => true]);
     }
 }
