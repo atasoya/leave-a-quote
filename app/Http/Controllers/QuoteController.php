@@ -9,10 +9,37 @@ class QuoteController extends Controller
 {
     public function index()
     {
-        // Fetching all quotes from the database
         $quotes = Quote::paginate(10);
+    
+        return view('welcome', ['quotes' => $quotes])
+            ->with('success', session('success'));
+    }
+    
 
-        // Returning the view and passing the quotes data
-        return view('welcome', ['quotes' => $quotes]);
+    public function create()
+    {
+        return view('create');
+    }
+
+    public function store(Request $request)
+    {
+        // Validate the request
+        $request->validate([
+            'writer' => 'required|string|max:255',
+            'quote' => 'required|string',
+            'likes' => 'integer',
+            'reports' => 'integer',
+        ]);
+
+        // Create a new quote
+        Quote::create([
+            'writer' => $request->writer,
+            'quote' => $request->quote,
+            'likes' => $request->likes ?? 0,
+            'reports' => $request->reports ?? 0,
+        ]);
+
+        // Redirect to a relevant page, e.g., the list of quotes
+        return redirect()->route('quotes.index')->with('success', 'Quote created successfully.');
     }
 }
