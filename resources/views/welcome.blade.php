@@ -13,5 +13,6 @@
     <p class="font-bold">
         Hello, world!!
     </p>
+    <button class="btn btn-primary">Primary</button>
 </body>
 </html>
