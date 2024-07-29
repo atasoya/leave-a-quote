@@ -18,10 +18,21 @@
         </div> --}}
         <div class="flex flex-col items-center quotes min-h-screen md:w-1/2 min-w-screen order-2 md:order-1 mt-10">
             @foreach($quotes as $quote)
-                <x-quote/>
+                <x-quote
+                    :quote="$quote->quote"
+                    :writer="$quote->writer"
+                    :likes="$quote->likes"
+                    :reports="$quote->reports"
+                    :created_at="$quote->created_at"
+                />
             @endforeach
-
+            <div class="pagination mt-4">
+                {{ $quotes->links() }}
+            </div>
         </div>
+        
    </div>
+
+   
 </body>
 </html>

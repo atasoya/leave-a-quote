@@ -10,7 +10,7 @@ class QuoteController extends Controller
     public function index()
     {
         // Fetching all quotes from the database
-        $quotes = Quote::all();
+        $quotes = Quote::paginate(10);
 
         // Returning the view and passing the quotes data
         return view('welcome', ['quotes' => $quotes]);
