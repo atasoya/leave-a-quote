@@ -13,10 +13,16 @@
 <body>
    <x-navbar/>
    <div class="content flex flex-col md:flex-row justify-between">
-        <div class="advertisement bg-blue-500 md:min-h-screen md:w-80 min-w-screen order-1 md:order-2 h-20">
+{{--         <div class="advertisement bg-blue-500 md:min-h-screen md:w-80 min-w-screen order-1 md:order-2 h-20">
             <p>sa</p>
-        </div>
-        <div class="quotes min-h-screen md:w-1/2 min-w-screen bg-red-500 order-2 md:order-1">
+        </div> --}}
+        <div class="flex flex-col items-center quotes min-h-screen md:w-1/2 min-w-screen order-2 md:order-1 mt-10">
+            <x-quote/>
+            <x-quote/>
+            <x-quote/>
+            <x-quote/>
+            <x-quote/>
+            <x-quote/>
             <x-quote/>
         </div>
    </div>
