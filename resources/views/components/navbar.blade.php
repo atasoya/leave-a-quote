@@ -18,7 +18,7 @@
         <ul
           tabindex="0"
           class="menu menu-sm dropdown-content bg-base-100 rounded-box z-[1] mt-3 w-52 p-2 shadow">
-          <li class="text-black"><a>Popular</a></li>
+          <li class="text-black"><a href="/popular">Popular</a></li>
           <li class="text-black"><a>Hot</a></li>
         </ul>
       </div>
