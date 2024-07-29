@@ -12,5 +12,13 @@
 </head>
 <body>
    <x-navbar/>
+   <div class="content flex justify-between">
+        <div class="quotes min-h-screen w-1/2 bg-red-500">
+            <x-quote/>
+        </div>
+        <div class="advertisement bg-blue-500 min-h-screen w-80 ">
+
+        </div>
+   </div>
 </body>
 </html>
