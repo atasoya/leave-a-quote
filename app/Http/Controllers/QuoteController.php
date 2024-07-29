@@ -63,4 +63,12 @@ class QuoteController extends Controller
         $quotes = Quote::orderBy('likes', 'desc')->paginate(10);
         return view('popular', ['quotes' => $quotes]);
     }
+
+    public function hot(){
+        $quotes = Quote::selectRaw('*, (likes / (julianday("now") - julianday(created_at) + 2)) AS hot_score')
+        ->orderBy('hot_score', 'desc')
+        ->paginate(10);
+        return view('hot', ['quotes' => $quotes]);
+    }
+
 }
