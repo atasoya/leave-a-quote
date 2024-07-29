@@ -17,13 +17,10 @@
             <p>sa</p>
         </div> --}}
         <div class="flex flex-col items-center quotes min-h-screen md:w-1/2 min-w-screen order-2 md:order-1 mt-10">
-            <x-quote/>
-            <x-quote/>
-            <x-quote/>
-            <x-quote/>
-            <x-quote/>
-            <x-quote/>
-            <x-quote/>
+            @foreach($quotes as $quote)
+                <x-quote/>
+            @endforeach
+
         </div>
    </div>
 </body>
