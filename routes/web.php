@@ -12,3 +12,5 @@ Route::post('/quotes/like', [QuoteController::class, 'handleInteraction'])->name
 Route::post('/quotes/flag', [QuoteController::class, 'handleInteraction'])->name('quotes.flag');
 
 Route::post('/quotes/interaction', [QuoteController::class, 'handleInteraction'])->name('quotes.interaction');
+
+Route::get('/popular', [QuoteController::class, 'popular'])->name('quotes.popular');

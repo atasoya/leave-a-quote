@@ -58,4 +58,9 @@ class QuoteController extends Controller
 
         return response()->json(['success' => true]);
     }
+
+    public function popular(){
+        $quotes = Quote::orderBy('likes', 'desc')->paginate(10);
+        return view('popular', ['quotes' => $quotes]);
+    }
 }
