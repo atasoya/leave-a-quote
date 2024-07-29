@@ -12,12 +12,12 @@
 </head>
 <body>
    <x-navbar/>
-   <div class="content flex justify-between">
-        <div class="quotes min-h-screen w-1/2 bg-red-500">
-            <x-quote/>
+   <div class="content flex flex-col md:flex-row justify-between">
+        <div class="advertisement bg-blue-500 md:min-h-screen md:w-80 min-w-screen order-1 md:order-2 h-20">
+            <p>sa</p>
         </div>
-        <div class="advertisement bg-blue-500 min-h-screen w-80 ">
-
+        <div class="quotes min-h-screen md:w-1/2 min-w-screen bg-red-500 order-2 md:order-1">
+            <x-quote/>
         </div>
    </div>
 </body>
