@@ -27,7 +27,7 @@
                 <div class="label">
                   <span class="label-text font-bold">Password</span>
                 </div>
-                <input type="text" name="password" id="password" placeholder="Type here" class="input input-bordered input-primary w-full max-w-xs mb-4" />
+                <input type="password" name="password" id="password" placeholder="Type here" class="input input-bordered input-primary w-full max-w-xs mb-4" />
 
             </label>
             
