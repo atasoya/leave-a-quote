@@ -54,9 +54,10 @@ We welcome contributions to this project, especially in the form of improving us
 
 ## Preview
 
-![Screen Shot3](/public/ss3.png)
-![Screen Shot1](/public/ss1.png)
-![Screen Shot2](/public/ss2.png)
-
+<p align="center">
+    <img src="https://github.com/atasoya/leave-a-quote/blob/main/public/ss1.png" alt="Screen Shot 3" width="250" />
+    <img src="https://github.com/atasoya/leave-a-quote/blob/main/public/ss2.png" alt="Screen Shot 1" width="250" />
+    <img src="https://github.com/atasoya/leave-a-quote/blob/main/public/ss3.png" alt="Screen Shot 2" width="250" />
+</p>
 
     
