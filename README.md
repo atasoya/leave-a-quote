@@ -52,8 +52,12 @@ We welcome contributions to this project, especially in the form of improving us
    php artisan serve
    ```
 
+## Preview
 
-
+<video width="600" controls>
+  <source src="public/video1.mov" type="video/mp4">
+  Your browser does not support the video tag.
+</video>
    
 
     
