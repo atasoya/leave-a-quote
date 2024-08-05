@@ -54,10 +54,9 @@ We welcome contributions to this project, especially in the form of improving us
 
 ## Preview
 
-<video width="600" controls>
-  <source src="public/video1.mov" type="video/mp4">
-  Your browser does not support the video tag.
-</video>
-   
+![Screen Shot3](/public/ss3.png)
+![Screen Shot1](/public/ss1.png)
+![Screen Shot2](/public/ss2.png)
+
 
     
